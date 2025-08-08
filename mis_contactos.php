@@ -44,5 +44,6 @@ $contactos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
     <br>
     <a href="./crud/crear_contacto.php">Agregar nuevo contacto</a>
+    <a href="cerrar_sesion.php">Cerrar sesión</a>
 </body>
 </html>

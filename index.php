@@ -11,7 +11,7 @@ session_start();
     <title>contacto-app</title>
 </head>
 <body>
-    <form method="POST">
+    <form  method="POST">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Contraseña" required>
         <button type="submit">ingresar</button>
