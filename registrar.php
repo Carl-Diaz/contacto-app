@@ -1,5 +1,5 @@
 <?php
-include 'include/conexion.php';
+require_once 'include/conexion.php';
 session_start();
 
 ?>
@@ -30,18 +30,22 @@ session_start();
             echo "Todos los campos son obligatorios.";
             exit;
         }
-        try{
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $conexion->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (:nombre, :email, :password)");
-        $stmt->bindParam(':nombre', $nombre);
+        // Validar email duplicado
+        $stmt = $conexion->prepare("SELECT id FROM usuarios WHERE email = :email");
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
         $stmt->execute();
-            echo "Registro exitoso";
-        } catch (PDOException $e) {
-            if ($e->getCode() == 23000) {
-                echo "El email ya está registrado.";
-            } else {
+        if ($stmt->fetch()) {
+            echo "El email ya está registrado.";
+        } else {
+            try{
+                $password = password_hash($password, PASSWORD_DEFAULT);
+                $stmt = $conexion->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (:nombre, :email, :password)");
+                $stmt->bindParam(':nombre', $nombre);
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':password', $password);
+                $stmt->execute();
+                echo "Registro exitoso";
+            } catch (PDOException $e) {
                 echo "Error al registrar: " . $e->getMessage();
             }
         }
