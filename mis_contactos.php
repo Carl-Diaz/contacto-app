@@ -45,5 +45,7 @@ $contactos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <br>
     <a href="./crud/crear_contacto.php">Agregar nuevo contacto</a>
     <a href="cerrar_sesion.php">Cerrar sesión</a>
+    <a href="./crud/editar_usuario.php">Editar mi perfil</a>
+    <a href="./crud/eliminar_usuario.php" onclick="return confirm('¿Seguro que deseas eliminar tu cuenta?');">Eliminar mi cuenta</a>
 </body>
 </html>

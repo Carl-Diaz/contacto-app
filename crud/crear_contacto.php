@@ -7,9 +7,11 @@ if (!isset($_SESSION["usuario_id"])) {
     header("Location: ../index.php");
     exit;
 }
+// Guarda el id del usuario actual desde la sesión
 $usuario_id = $_SESSION["usuario_id"];
 
 $mensaje = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];

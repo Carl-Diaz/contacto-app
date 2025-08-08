@@ -1,5 +1,6 @@
 <?php
-function createUsuario($conexion, $nombre, $email, $password){
+function createUsuario($conexion, $nombre, $email, $password)
+{
     if (empty($nombre) || empty($email) || empty($password)) {
         return "Todos los campos son obligatorios.";
     }
@@ -22,7 +23,8 @@ function createUsuario($conexion, $nombre, $email, $password){
     }
 }
 
-function updateUsuario($conexion, $id, $nombre, $email, $password){
+function updateUsuario($conexion, $id, $nombre, $email, $password)
+{
     if (empty($id) || empty($nombre) || empty($email)) {
         return "Todos los campos son obligatorios.";
     }
@@ -37,7 +39,8 @@ function updateUsuario($conexion, $id, $nombre, $email, $password){
             $stmt->bindParam(':id', $id);
             $stmt->bindParam(':nombre', $nombre);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', password_hash($password, PASSWORD_DEFAULT));
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $stmt->bindParam(':password', $hash);
         }
         $stmt->execute();
         return "Usuario actualizado exitosamente.";
@@ -46,16 +49,16 @@ function updateUsuario($conexion, $id, $nombre, $email, $password){
     }
 }
 
-function deleteUsuario($conexion, $id){
+function deleteUsuario($conexion, $id)
+{
     if (empty($id)) {
-        return "El ID del usuario es obligatorio.";
+        return false;
     }
     try {
         $stmt = $conexion->prepare("DELETE FROM usuarios WHERE id = :id");
         $stmt->bindParam(':id', $id);
-        $stmt->execute();
-        return "Usuario eliminado exitosamente.";
+        return $stmt->execute(); // true si fue exitoso, false si falló
     } catch (PDOException $e) {
-        return "Error al eliminar usuario: " . $e->getMessage();
+        return false;
     }
-}   
+}
