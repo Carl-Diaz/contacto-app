@@ -77,15 +77,12 @@ Inicia tu servidor y accede a index.php desde tu navegador para comenzar.
 Funcionalidades
 - Registro de usuarios
 
-- Login con validación de contraseña encriptada (password_hash)
-
-- CRUD de contactos por cada usuario (solo ve y edita sus propios)
+- CRUD de contactos por cada usuario 
 
 - Edición del perfil de usuario
 
-- Eliminación de cuenta (con cierre automático de sesión)
+- Eliminación de cuenta 
 
-- Validación de sesión para proteger rutas privadas
 
 ## Autor
 Desarrollado por CARLOS DIAZ
