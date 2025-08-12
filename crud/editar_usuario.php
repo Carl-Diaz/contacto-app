@@ -8,14 +8,13 @@ if (!isset($_SESSION['usuario_id'])) {
     exit;
 }
 
-$id = $_SESSION['usuario_id'];
+$id = $_SESSION['usuario_id']; //
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Procesar actualización
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-
     $resultado = updateUsuario($conexion, $id, $nombre, $email, $password);
     $mensaje = $resultado;
 }
@@ -34,7 +33,7 @@ if (!$usuario) {
 
 <h2>Editar Usuario</h2>
 <?php if (isset($mensaje)): ?>
-    <p><?= htmlspecialchars($mensaje) ?></p>
+    <p><?= htmlspecialchars($mensaje) ?></p> // Mensaje de éxito o error cual es el mensje 
 <?php endif; ?>
 
 <form method="POST">

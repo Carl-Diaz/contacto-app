@@ -13,25 +13,25 @@ if (!isset($_GET['id'])) {
     echo "ID de contacto no especificado.";
     exit;
 }
-$id = $_GET['id'];
+$id = $_GET['id']; // ID del contacto a editar
 
 // Obtener datos actuales del contacto
 $stmt = $conexion->prepare("SELECT * FROM contactos WHERE id = :id AND usuario_id = :usuario_id");
 $stmt->bindParam(':id', $id);
 $stmt->bindParam(':usuario_id', $usuario_id);
 $stmt->execute();
-$contacto = $stmt->fetch(PDO::FETCH_ASSOC);
+$contacto = $stmt->fetch(PDO::FETCH_ASSOC); // Obtener datos del contacto
 if (!$contacto) {
     echo "Contacto no encontrado o no tienes permisos.";
     exit;
 }
 
-$mensaje = "";
+$mensaje = ""; // Mensaje de éxito o error
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $telefono = $_POST['telefono'];
-    $mensaje = updateContacto($conexion, $id, $nombre, $email, $telefono);
+    $mensaje = updateContacto($conexion, $id, $nombre, $email, $telefono); // Llama a la función de actualización
     // Actualizar datos para mostrar en el formulario
     $contacto['nombre'] = $nombre;
     $contacto['email'] = $email;

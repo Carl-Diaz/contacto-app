@@ -10,7 +10,7 @@ if (!isset($_SESSION["usuario_id"])) {
 // Guarda el id del usuario actual desde la sesión
 $usuario_id = $_SESSION["usuario_id"];
 
-$mensaje = "";
+$mensaje = ""; // Mensaje de éxito o error
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
