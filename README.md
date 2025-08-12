@@ -69,10 +69,6 @@ CREATE TABLE contactos (
 );
 Configura tu archivo include/conexion.php con tus credenciales de base de datos:
 
-$dsn = 'mysql:host=localhost;dbname=contactos_app_db;charset=utf8';
-$usuario = 'root';
-$clave = '';
-Inicia tu servidor y accede a index.php desde tu navegador para comenzar.
 
 Funcionalidades
 - Registro de usuarios
