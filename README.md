@@ -15,7 +15,7 @@ CONTACTO-APP/<br>
 │
 <br>├── index.php # Página de inicio con formulario de login
 <br>├── registrar.php # Página para registrar nuevos usuarios
-<br> mis_contactos.php # Lista de contactos del usuario actual
+<br>|mis_contactos.php # Lista de contactos del usuario actual
 <br>├── cerrar_sesion.php # Cierra la sesión activa
 <br>│
 <br>├── crud/
