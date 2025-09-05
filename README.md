@@ -78,23 +78,23 @@ Asegurar que mod_rewrite esté habilitado
 
 **Tabla: usuarios**
 CREATE TABLE usuarios (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    email VARCHAR(150) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
+    id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    nombre VARCHAR(100) NOT NULL,<br>
+    email VARCHAR(150) UNIQUE NOT NULL,<br>
+    password VARCHAR(255) NOT NULL,<br>
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 **Tabla: contactos**
 CREATE TABLE contactos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    usuario_id INT NOT NULL,
-    nombre VARCHAR(100) NOT NULL,
-    telefono VARCHAR(20) NOT NULL,
-    email VARCHAR(150) NOT NULL,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
-    UNIQUE KEY email_unique (usuario_id, email),
+    id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    usuario_id INT NOT NULL,<br>
+    nombre VARCHAR(100) NOT NULL,<br>
+    telefono VARCHAR(20) NOT NULL,<br>
+    email VARCHAR(150) NOT NULL,<br>
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,<br>
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,<br>
+    UNIQUE KEY email_unique (usuario_id, email),<br>
     UNIQUE KEY telefono_unique (usuario_id, telefono)
 );
 
