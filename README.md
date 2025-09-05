@@ -31,28 +31,28 @@ Una aplicación web completa para gestión de contactos personales, desarrollada
 ## Estructura del Proyecto
 contacto-app/<br>
 <br>├── app/
-<br>│ <br>├── Config/
-<br>│ <br>│ └── Database.php
-<br>│ <br>├── Controllers/
-<br>│ <br>│ ├── UsuarioController.php
-│ │ └── ContactoController.php
-│ ├── Models/
-│ │ ├── Usuario.php
-│ │ └── Contacto.php
-│ ├── Views/
-│ │ ├── usuario/
-│ │ │ ├── login.php
-│ │ │ ├── registro.php
-│ │ │ ├── perfil.php
-│ │ │ └── editarPerfil.php
-│ │ └── contacto/
-│ │ ├── crear.php
-│ │ └── editar.php
-│ └── Router.php
-├── public/
-│ ├── index.php
-│ └── .htaccess
-├── vendor/
+<br>│ ├── Config/
+<br>│ │ └── Database.php
+<br>│ ├── Controllers/
+<br>│ ├── UsuarioController.php
+<br>│ │ └── ContactoController.php
+<br>│ ├── Models/
+<br>│ │ ├── Usuario.php
+<br>│ │ └── Contacto.php
+<br>│ ├── Views/
+<br>│ │ ├── usuario/
+<br>│ │ │ ├── login.php
+<br>│ │ │ ├── registro.php
+<br>│ │ │ ├── perfil.php
+<br>│ │ │ └── editarPerfil.php
+<br>│ │ └── contacto/
+<br>│ │ ├── crear.php
+<br>│ │ └── editar.php
+<br>│ └── Router.php
+<br>├── public/
+<br>│ ├── index.php
+<br>│ └── .htaccess
+<br>├── vendor/
 └── composer.json
 
 
