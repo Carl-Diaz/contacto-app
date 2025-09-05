@@ -17,20 +17,20 @@ CONTACTO-APP/<br>
 <br>├── registrar.php # Página para registrar nuevos usuarios
 <br> mis_contactos.php # Lista de contactos del usuario actual
 <br>├── cerrar_sesion.php # Cierra la sesión activa
-│
-├── crud/
-│ ├── crear_contacto.php # Lógica para crear nuevos contactos
-│ ├── editar_contacto.php # Formulario para editar un contacto
-│ ├── eliminar_contacto.php # Elimina un contacto
-│ ├── editar_usuario.php # Formulario para editar perfil de usuario
-│ └── eliminar_usuario.php # Elimina la cuenta del usuario logueado
-│
-├── include/
-│ ├── conexion.php # Conexión PDO a la base de datos
-│ ├── funciones_contactos.php # Funciones CRUD para contactos
-│ └── funciones_usuarios.php # Funciones CRUD para usuarios
-│
-└── README.md # Este archivo
+<br>│
+<br>├── crud/
+<br>│ ├── crear_contacto.php # Lógica para crear nuevos contactos
+<br>│ ├── editar_contacto.php # Formulario para editar un contacto
+<br>│ ├── eliminar_contacto.php # Elimina un contacto
+<br>│ ├── editar_usuario.php # Formulario para editar perfil de usuario
+<br>│ └── eliminar_usuario.php # Elimina la cuenta del usuario logueado
+<br>│
+<br>├── include/
+<br>│ <br>├── conexion.php # Conexión PDO a la base de datos
+<br>│ <br>├── funciones_contactos.php # Funciones CRUD para contactos
+<br>│ <br>└── funciones_usuarios.php # Funciones CRUD para usuarios
+<br>│
+<br>└── README.md # Este archivo
 
 ---
 
