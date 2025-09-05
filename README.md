@@ -11,12 +11,12 @@ Aplicación web de gestión de usuarios y contactos desarrollada en **PHP** con 
 
 ## Estructura del Proyecto
 
-CONTACTO-APP/
+CONTACTO-APP/<br>
 │
-├── index.php # Página de inicio con formulario de login
-├── registrar.php # Página para registrar nuevos usuarios
-├── mis_contactos.php # Lista de contactos del usuario actual
-├── cerrar_sesion.php # Cierra la sesión activa
+<br>├── index.php # Página de inicio con formulario de login
+<br>├── registrar.php # Página para registrar nuevos usuarios
+<br> mis_contactos.php # Lista de contactos del usuario actual
+<br>├── cerrar_sesion.php # Cierra la sesión activa
 │
 ├── crud/
 │ ├── crear_contacto.php # Lógica para crear nuevos contactos
