@@ -29,12 +29,12 @@ Una aplicación web completa para gestión de contactos personales, desarrollada
 - **Servidor:** Apache (compatible con Laragon/XAMPP)
 
 ## Estructura del Proyecto
-contacto-app/
-├── app/
-│ ├── Config/
-│ │ └── Database.php
-│ ├── Controllers/
-│ │ ├── UsuarioController.php
+contacto-app/<br>
+<br>├── app/
+<br>│ <br>├── Config/
+<br>│ <br>│ └── Database.php
+<br>│ <br>├── Controllers/
+<br>│ <br>│ ├── UsuarioController.php
 │ │ └── ContactoController.php
 │ ├── Models/
 │ │ ├── Usuario.php
