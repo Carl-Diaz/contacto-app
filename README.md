@@ -116,11 +116,11 @@ CREATE TABLE contactos (
 /contacto/editar/{id} - Formulario editar contacto
 
 **POST**
-/login - Procesar login
-/registro - Procesar registro
-/contacto/guardar - Guardar nuevo contacto
-/contacto/actualizar/{id} - Actualizar contacto
-/contacto/eliminar/{id} - Eliminar contacto
+/login - Procesar login<br>
+/registro - Procesar registro<br>
+/contacto/guardar - Guardar nuevo contacto<br>
+/contacto/actualizar/{id} - Actualizar contacto<br>
+/contacto/eliminar/{id} - Eliminar contacto<br>
 /logout - Cerrar sesión
 
 # Desarrollo
