@@ -1,0 +1,14 @@
+# Usar index.php como archivo principal
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /contacto-app/public/
+
+    # Si el archivo o directorio existe, se sirve directamente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Si no existe, redirige todo a index.php
+    RewriteRule ^ index.php [L]
+</IfModule>
